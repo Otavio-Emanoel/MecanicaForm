@@ -47,8 +47,8 @@ namespace MecanicaForm
             {
                 MessageBox.Show("Login realizado com sucesso!");
 
-                var home = new HomeForm();
-                home.Show();
+                var homeLogged = new HomePage();
+                homeLogged.Show();
                 this.Hide();
             }
             else

@@ -19,3 +19,4 @@ C:\Users\Aluno\Source\Repos\MecanicaForm\MecanicaForm\obj\Debug\net8.0-windows\r
 C:\Users\Aluno\Source\Repos\MecanicaForm\MecanicaForm\obj\Debug\net8.0-windows\MecanicaForm.pdb
 C:\Users\Aluno\Source\Repos\MecanicaForm\MecanicaForm\obj\Debug\net8.0-windows\MecanicaForm.genruntimeconfig.cache
 C:\Users\Aluno\Source\Repos\MecanicaForm\MecanicaForm\obj\Debug\net8.0-windows\ref\MecanicaForm.dll
+C:\Users\Aluno\Source\Repos\MecanicaForm\MecanicaForm\obj\Debug\net8.0-windows\MecanicaForm.HomePage.resources

@@ -62,7 +62,7 @@
             goToRegisterForm.Location = new Point(28, 343);
             goToRegisterForm.Name = "goToRegisterForm";
             goToRegisterForm.Size = new Size(216, 35);
-            goToRegisterForm.TabIndex = 24;
+            goToRegisterForm.TabIndex = 5;
             goToRegisterForm.Text = "NÃO TENHO CONTA";
             goToRegisterForm.UseVisualStyleBackColor = false;
             goToRegisterForm.Click += goToRegisterForm_Click;
@@ -78,7 +78,7 @@
             loginBtn.Location = new Point(28, 292);
             loginBtn.Name = "loginBtn";
             loginBtn.Size = new Size(216, 35);
-            loginBtn.TabIndex = 23;
+            loginBtn.TabIndex = 4;
             loginBtn.Text = "LOGIN";
             loginBtn.UseVisualStyleBackColor = false;
             loginBtn.Click += loginBtn_Click;
@@ -93,7 +93,7 @@
             usernameTxt.Multiline = true;
             usernameTxt.Name = "usernameTxt";
             usernameTxt.Size = new Size(216, 28);
-            usernameTxt.TabIndex = 22;
+            usernameTxt.TabIndex = 1;
             // 
             // label5
             // 
@@ -116,7 +116,7 @@
             showPassword.Location = new Point(130, 243);
             showPassword.Name = "showPassword";
             showPassword.Size = new Size(114, 23);
-            showPassword.TabIndex = 20;
+            showPassword.TabIndex = 3;
             showPassword.Text = "Mostrar senha";
             showPassword.UseVisualStyleBackColor = true;
             showPassword.CheckedChanged += showPassword_CheckedChanged;
@@ -131,7 +131,7 @@
             passwordTxt.Multiline = true;
             passwordTxt.Name = "passwordTxt";
             passwordTxt.Size = new Size(216, 28);
-            passwordTxt.TabIndex = 17;
+            passwordTxt.TabIndex = 2;
             passwordTxt.UseSystemPasswordChar = true;
             // 
             // label3

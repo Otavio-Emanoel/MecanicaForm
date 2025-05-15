@@ -16,5 +16,27 @@ namespace MecanicaForm
         {
             InitializeComponent();
         }
+
+        private void closeWindowBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void openMenu_Click(object sender, EventArgs e)
+        {
+            if (leftMenu.Visible == true)
+            {
+                leftMenu.Visible = false;
+            }
+            else
+            {
+                leftMenu.Visible = true;
+            }
+        }
     }
 }
