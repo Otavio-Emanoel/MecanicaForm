@@ -28,23 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
+            windowTopHome = new Panel();
             closeWindow = new PictureBox();
             registerBtn = new Button();
-            button1 = new Button();
-            panel1.SuspendLayout();
+            loginBtn = new Button();
+            pictureBox1 = new PictureBox();
+            windowTopHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)closeWindow).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // windowTopHome
             // 
-            panel1.BackColor = Color.FromArgb(80, 82, 82);
-            panel1.Controls.Add(closeWindow);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1000, 30);
-            panel1.TabIndex = 0;
+            windowTopHome.BackColor = Color.FromArgb(80, 82, 82);
+            windowTopHome.Controls.Add(closeWindow);
+            windowTopHome.Dock = DockStyle.Top;
+            windowTopHome.Location = new Point(0, 0);
+            windowTopHome.Name = "windowTopHome";
+            windowTopHome.Size = new Size(1000, 30);
+            windowTopHome.TabIndex = 0;
             // 
             // closeWindow
             // 
@@ -58,6 +61,7 @@
             closeWindow.TabIndex = 0;
             closeWindow.TabStop = false;
             closeWindow.Click += closeWindow_Click;
+            closeWindow.MouseLeave += closeWindow_MouseLeave;
             closeWindow.MouseHover += closeWindow_MouseHover;
             // 
             // registerBtn
@@ -76,22 +80,33 @@
             registerBtn.TabIndex = 1;
             registerBtn.Text = "Cadastro";
             registerBtn.UseVisualStyleBackColor = false;
+            registerBtn.Click += registerBtn_Click;
             // 
-            // button1
+            // loginBtn
             // 
-            button1.BackColor = Color.White;
-            button1.BackgroundImageLayout = ImageLayout.None;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(67, 316);
-            button1.Name = "button1";
-            button1.Size = new Size(263, 81);
-            button1.TabIndex = 2;
-            button1.Text = "Cadastro";
-            button1.UseVisualStyleBackColor = false;
+            loginBtn.BackColor = Color.White;
+            loginBtn.BackgroundImageLayout = ImageLayout.None;
+            loginBtn.Cursor = Cursors.Hand;
+            loginBtn.FlatAppearance.BorderSize = 0;
+            loginBtn.FlatStyle = FlatStyle.Flat;
+            loginBtn.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            loginBtn.ForeColor = Color.Black;
+            loginBtn.Location = new Point(67, 316);
+            loginBtn.Name = "loginBtn";
+            loginBtn.Size = new Size(263, 81);
+            loginBtn.TabIndex = 2;
+            loginBtn.Text = "Login";
+            loginBtn.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(595, 123);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(346, 349);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
             // 
             // HomeForm
             // 
@@ -99,22 +114,25 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 12, 12);
             ClientSize = new Size(1000, 600);
-            Controls.Add(button1);
+            Controls.Add(pictureBox1);
+            Controls.Add(loginBtn);
             Controls.Add(registerBtn);
-            Controls.Add(panel1);
+            Controls.Add(windowTopHome);
             FormBorderStyle = FormBorderStyle.None;
             Name = "HomeForm";
             StartPosition = FormStartPosition.CenterScreen;
-            panel1.ResumeLayout(false);
+            windowTopHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)closeWindow).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel windowTopHome;
         private Button registerBtn;
-        private Button button1;
+        private Button loginBtn;
         private PictureBox closeWindow;
+        private PictureBox pictureBox1;
     }
 }
