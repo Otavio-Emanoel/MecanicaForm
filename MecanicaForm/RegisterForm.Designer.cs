@@ -39,7 +39,7 @@
             showPassword = new CheckBox();
             emailTxt = new TextBox();
             label5 = new Label();
-            button1 = new Button();
+            registerBtn = new Button();
             goToLoginForm = new Button();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -75,7 +75,7 @@
             usernameTxt.Multiline = true;
             usernameTxt.Name = "usernameTxt";
             usernameTxt.Size = new Size(216, 28);
-            usernameTxt.TabIndex = 2;
+            usernameTxt.TabIndex = 1;
             // 
             // passwordTxt
             // 
@@ -87,7 +87,8 @@
             passwordTxt.Multiline = true;
             passwordTxt.Name = "passwordTxt";
             passwordTxt.Size = new Size(216, 28);
-            passwordTxt.TabIndex = 4;
+            passwordTxt.TabIndex = 3;
+            passwordTxt.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -108,7 +109,8 @@
             confirmPasswordTxt.Multiline = true;
             confirmPasswordTxt.Name = "confirmPasswordTxt";
             confirmPasswordTxt.Size = new Size(216, 28);
-            confirmPasswordTxt.TabIndex = 6;
+            confirmPasswordTxt.TabIndex = 4;
+            confirmPasswordTxt.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -127,9 +129,11 @@
             showPassword.Location = new Point(130, 347);
             showPassword.Name = "showPassword";
             showPassword.Size = new Size(114, 23);
-            showPassword.TabIndex = 7;
+            showPassword.TabIndex = 5;
             showPassword.Text = "Mostrar senha";
             showPassword.UseVisualStyleBackColor = true;
+            showPassword.CheckedChanged += showPassword_CheckedChanged;
+
             // 
             // emailTxt
             // 
@@ -141,7 +145,7 @@
             emailTxt.Multiline = true;
             emailTxt.Name = "emailTxt";
             emailTxt.Size = new Size(216, 28);
-            emailTxt.TabIndex = 9;
+            emailTxt.TabIndex = 2;
             // 
             // label5
             // 
@@ -152,20 +156,21 @@
             label5.TabIndex = 8;
             label5.Text = "Email";
             // 
-            // button1
+            // registerBtn
             // 
-            button1.BackColor = Color.FromArgb(96, 86, 194);
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(28, 387);
-            button1.Name = "button1";
-            button1.Size = new Size(216, 35);
-            button1.TabIndex = 10;
-            button1.Text = "CADASTRAR";
-            button1.UseVisualStyleBackColor = false;
+            registerBtn.BackColor = Color.FromArgb(96, 86, 194);
+            registerBtn.Cursor = Cursors.Hand;
+            registerBtn.FlatAppearance.BorderSize = 0;
+            registerBtn.FlatStyle = FlatStyle.Flat;
+            registerBtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            registerBtn.ForeColor = Color.White;
+            registerBtn.Location = new Point(28, 387);
+            registerBtn.Name = "registerBtn";
+            registerBtn.Size = new Size(216, 35);
+            registerBtn.TabIndex = 6;
+            registerBtn.Text = "CADASTRAR";
+            registerBtn.UseVisualStyleBackColor = false;
+            registerBtn.Click += registerBtn_Click;
             // 
             // goToLoginForm
             // 
@@ -178,9 +183,10 @@
             goToLoginForm.Location = new Point(28, 438);
             goToLoginForm.Name = "goToLoginForm";
             goToLoginForm.Size = new Size(216, 35);
-            goToLoginForm.TabIndex = 11;
+            goToLoginForm.TabIndex = 7;
             goToLoginForm.Text = "JÁ TENHO CONTA";
             goToLoginForm.UseVisualStyleBackColor = false;
+            goToLoginForm.Click += goToLoginForm_Click;
             // 
             // pictureBox1
             // 
@@ -200,7 +206,7 @@
             ClientSize = new Size(272, 522);
             Controls.Add(pictureBox1);
             Controls.Add(goToLoginForm);
-            Controls.Add(button1);
+            Controls.Add(registerBtn);
             Controls.Add(emailTxt);
             Controls.Add(label5);
             Controls.Add(showPassword);
@@ -234,7 +240,7 @@
         private CheckBox showPassword;
         private TextBox emailTxt;
         private Label label5;
-        private Button button1;
+        private Button registerBtn;
         private Button goToLoginForm;
         private PictureBox pictureBox1;
     }
