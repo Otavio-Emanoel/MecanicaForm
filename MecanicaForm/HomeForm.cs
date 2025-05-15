@@ -60,5 +60,12 @@ namespace MecanicaForm
             registerForm.Show();
             this.Hide();
         }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            var loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
     }
 }
