@@ -20,3 +20,5 @@ C:\Users\Aluno\Source\Repos\MecanicaForm\MecanicaForm\obj\Debug\net8.0-windows\M
 C:\Users\Aluno\Source\Repos\MecanicaForm\MecanicaForm\obj\Debug\net8.0-windows\MecanicaForm.genruntimeconfig.cache
 C:\Users\Aluno\Source\Repos\MecanicaForm\MecanicaForm\obj\Debug\net8.0-windows\ref\MecanicaForm.dll
 C:\Users\Aluno\Source\Repos\MecanicaForm\MecanicaForm\obj\Debug\net8.0-windows\MecanicaForm.HomePage.resources
+C:\Users\Aluno\Source\Repos\MecanicaForm\MecanicaForm\obj\Debug\net8.0-windows\MecanicaForm.InserirForm.resources
+C:\Users\Aluno\Source\Repos\MecanicaForm\MecanicaForm\obj\Debug\net8.0-windows\MecanicaForm.ExcluirForm.resources

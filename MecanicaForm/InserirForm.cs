@@ -1,19 +1,27 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 
 namespace MecanicaForm
 {
-    public partial class HomePage : Form
+    public partial class InserirForm : Form
     {
+        public InserirForm()
+        {
+
+            InitializeComponent();
+
+            menuTimer = new System.Windows.Forms.Timer();
+            menuTimer.Interval = 10;
+            menuTimer.Tick += MenuTimer_Tick;
+        }
         private System.Windows.Forms.Timer menuTimer;
         private bool isMenuOpening;
         private int targetMenuWidth = 258;
@@ -28,14 +36,6 @@ namespace MecanicaForm
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
-        public HomePage()
-        {
-            InitializeComponent();
-
-            menuTimer = new System.Windows.Forms.Timer();
-            menuTimer.Interval = 10;
-            menuTimer.Tick += MenuTimer_Tick;
-        }
 
         private void HomePage_Load(object sender, EventArgs e)
         {
@@ -111,10 +111,10 @@ namespace MecanicaForm
             }
         }
 
-        private void inserirBtn_Click(object sender, EventArgs e)
+        private void homePageBtn_Click(object sender, EventArgs e)
         {
-            var InserirForm = new InserirForm();
-            InserirForm.Show();
+            var HomePage = new HomePage();
+            HomePage.Show();
             this.Hide();
         }
     }

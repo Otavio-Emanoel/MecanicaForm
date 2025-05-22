@@ -72,9 +72,8 @@
             usernameTxt.Font = new Font("MS UI Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             usernameTxt.ForeColor = SystemColors.WindowText;
             usernameTxt.Location = new Point(28, 136);
-            usernameTxt.Multiline = true;
             usernameTxt.Name = "usernameTxt";
-            usernameTxt.Size = new Size(216, 28);
+            usernameTxt.Size = new Size(216, 20);
             usernameTxt.TabIndex = 1;
             // 
             // passwordTxt
@@ -84,9 +83,8 @@
             passwordTxt.Font = new Font("MS UI Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             passwordTxt.ForeColor = SystemColors.WindowText;
             passwordTxt.Location = new Point(28, 254);
-            passwordTxt.Multiline = true;
             passwordTxt.Name = "passwordTxt";
-            passwordTxt.Size = new Size(216, 28);
+            passwordTxt.Size = new Size(216, 20);
             passwordTxt.TabIndex = 3;
             passwordTxt.UseSystemPasswordChar = true;
             // 
@@ -106,9 +104,8 @@
             confirmPasswordTxt.Font = new Font("MS UI Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             confirmPasswordTxt.ForeColor = SystemColors.WindowText;
             confirmPasswordTxt.Location = new Point(28, 313);
-            confirmPasswordTxt.Multiline = true;
             confirmPasswordTxt.Name = "confirmPasswordTxt";
-            confirmPasswordTxt.Size = new Size(216, 28);
+            confirmPasswordTxt.Size = new Size(216, 20);
             confirmPasswordTxt.TabIndex = 4;
             confirmPasswordTxt.UseSystemPasswordChar = true;
             // 
@@ -133,7 +130,6 @@
             showPassword.Text = "Mostrar senha";
             showPassword.UseVisualStyleBackColor = true;
             showPassword.CheckedChanged += showPassword_CheckedChanged;
-
             // 
             // emailTxt
             // 
@@ -142,9 +138,8 @@
             emailTxt.Font = new Font("MS UI Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             emailTxt.ForeColor = SystemColors.WindowText;
             emailTxt.Location = new Point(28, 195);
-            emailTxt.Multiline = true;
             emailTxt.Name = "emailTxt";
-            emailTxt.Size = new Size(216, 28);
+            emailTxt.Size = new Size(216, 20);
             emailTxt.TabIndex = 2;
             // 
             // label5

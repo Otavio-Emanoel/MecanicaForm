@@ -90,9 +90,8 @@
             usernameTxt.Font = new Font("MS UI Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             usernameTxt.ForeColor = SystemColors.WindowText;
             usernameTxt.Location = new Point(28, 139);
-            usernameTxt.Multiline = true;
             usernameTxt.Name = "usernameTxt";
-            usernameTxt.Size = new Size(216, 28);
+            usernameTxt.Size = new Size(216, 20);
             usernameTxt.TabIndex = 1;
             // 
             // label5
@@ -128,9 +127,8 @@
             passwordTxt.Font = new Font("MS UI Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             passwordTxt.ForeColor = SystemColors.WindowText;
             passwordTxt.Location = new Point(28, 197);
-            passwordTxt.Multiline = true;
             passwordTxt.Name = "passwordTxt";
-            passwordTxt.Size = new Size(216, 28);
+            passwordTxt.Size = new Size(216, 20);
             passwordTxt.TabIndex = 2;
             passwordTxt.UseSystemPasswordChar = true;
             // 

@@ -1,6 +1,6 @@
 ﻿namespace MecanicaForm
 {
-    partial class HomePage
+    partial class InserirForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
-            windowTop = new Panel();
-            closeWindowBtn = new PictureBox();
-            openMenu = new PictureBox();
             leftMenu = new Panel();
             homePageBtn = new Button();
             sairBtn = new Button();
@@ -39,57 +35,14 @@
             alterarBtn = new Button();
             excluirBtn = new Button();
             inserirBtn = new Button();
-            ultimoBtn = new Button();
-            proximoBtn = new Button();
-            anteriorBtn = new Button();
-            primeiroBtn = new Button();
-            pictureBox1 = new PictureBox();
+            windowTop = new Panel();
+            closeWindowBtn = new PictureBox();
+            openMenu = new PictureBox();
+            leftMenu.SuspendLayout();
             windowTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)closeWindowBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)openMenu).BeginInit();
-            leftMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // windowTop
-            // 
-            windowTop.BackColor = Color.FromArgb(96, 86, 194);
-            windowTop.Controls.Add(closeWindowBtn);
-            windowTop.Controls.Add(openMenu);
-            windowTop.Dock = DockStyle.Top;
-            windowTop.Location = new Point(0, 0);
-            windowTop.Name = "windowTop";
-            windowTop.Size = new Size(1184, 50);
-            windowTop.TabIndex = 0;
-            windowTop.MouseDown += windowTop_MouseDown;
-            // 
-            // closeWindowBtn
-            // 
-            closeWindowBtn.Cursor = Cursors.Hand;
-            closeWindowBtn.Dock = DockStyle.Right;
-            closeWindowBtn.Image = Properties.Resources.close;
-            closeWindowBtn.Location = new Point(1134, 0);
-            closeWindowBtn.Margin = new Padding(0);
-            closeWindowBtn.Name = "closeWindowBtn";
-            closeWindowBtn.Size = new Size(50, 50);
-            closeWindowBtn.SizeMode = PictureBoxSizeMode.StretchImage;
-            closeWindowBtn.TabIndex = 1;
-            closeWindowBtn.TabStop = false;
-            closeWindowBtn.Click += closeWindowBtn_Click;
-            // 
-            // openMenu
-            // 
-            openMenu.Cursor = Cursors.Hand;
-            openMenu.Dock = DockStyle.Left;
-            openMenu.Image = Properties.Resources.menu;
-            openMenu.Location = new Point(0, 0);
-            openMenu.Margin = new Padding(0);
-            openMenu.Name = "openMenu";
-            openMenu.Size = new Size(50, 50);
-            openMenu.SizeMode = PictureBoxSizeMode.StretchImage;
-            openMenu.TabIndex = 0;
-            openMenu.TabStop = false;
-            openMenu.Click += openMenu_Click;
             // 
             // leftMenu
             // 
@@ -104,7 +57,7 @@
             leftMenu.Location = new Point(0, 50);
             leftMenu.Name = "leftMenu";
             leftMenu.Size = new Size(258, 661);
-            leftMenu.TabIndex = 1;
+            leftMenu.TabIndex = 15;
             leftMenu.Visible = false;
             // 
             // homePageBtn
@@ -122,6 +75,7 @@
             homePageBtn.TabIndex = 5;
             homePageBtn.Text = "INÍCIO";
             homePageBtn.UseVisualStyleBackColor = false;
+            homePageBtn.Click += homePageBtn_Click;
             // 
             // sairBtn
             // 
@@ -202,127 +156,75 @@
             inserirBtn.TabIndex = 0;
             inserirBtn.Text = "INSERIR";
             inserirBtn.UseVisualStyleBackColor = false;
-            inserirBtn.Click += inserirBtn_Click;
             // 
-            // ultimoBtn
+            // windowTop
             // 
-            ultimoBtn.Anchor = AnchorStyles.Bottom;
-            ultimoBtn.BackColor = Color.FromArgb(96, 96, 120);
-            ultimoBtn.FlatAppearance.BorderSize = 0;
-            ultimoBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
-            ultimoBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
-            ultimoBtn.FlatStyle = FlatStyle.Flat;
-            ultimoBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
-            ultimoBtn.ForeColor = Color.White;
-            ultimoBtn.Location = new Point(1048, 653);
-            ultimoBtn.Name = "ultimoBtn";
-            ultimoBtn.Size = new Size(124, 45);
-            ultimoBtn.TabIndex = 6;
-            ultimoBtn.Text = "ÚLTIMO";
-            ultimoBtn.UseVisualStyleBackColor = false;
+            windowTop.BackColor = Color.FromArgb(96, 86, 194);
+            windowTop.Controls.Add(closeWindowBtn);
+            windowTop.Controls.Add(openMenu);
+            windowTop.Dock = DockStyle.Top;
+            windowTop.Location = new Point(0, 0);
+            windowTop.Name = "windowTop";
+            windowTop.Size = new Size(1184, 50);
+            windowTop.TabIndex = 14;
+            windowTop.MouseDown += windowTop_MouseDown;
             // 
-            // proximoBtn
+            // closeWindowBtn
             // 
-            proximoBtn.Anchor = AnchorStyles.Bottom;
-            proximoBtn.BackColor = Color.FromArgb(96, 96, 120);
-            proximoBtn.FlatAppearance.BorderSize = 0;
-            proximoBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
-            proximoBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
-            proximoBtn.FlatStyle = FlatStyle.Flat;
-            proximoBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
-            proximoBtn.ForeColor = Color.White;
-            proximoBtn.Location = new Point(918, 653);
-            proximoBtn.Name = "proximoBtn";
-            proximoBtn.Size = new Size(124, 45);
-            proximoBtn.TabIndex = 7;
-            proximoBtn.Text = "PRÓXIMO";
-            proximoBtn.UseVisualStyleBackColor = false;
+            closeWindowBtn.Cursor = Cursors.Hand;
+            closeWindowBtn.Dock = DockStyle.Right;
+            closeWindowBtn.Image = Properties.Resources.close;
+            closeWindowBtn.Location = new Point(1134, 0);
+            closeWindowBtn.Margin = new Padding(0);
+            closeWindowBtn.Name = "closeWindowBtn";
+            closeWindowBtn.Size = new Size(50, 50);
+            closeWindowBtn.SizeMode = PictureBoxSizeMode.StretchImage;
+            closeWindowBtn.TabIndex = 1;
+            closeWindowBtn.TabStop = false;
+            closeWindowBtn.Click += closeWindowBtn_Click;
             // 
-            // anteriorBtn
+            // openMenu
             // 
-            anteriorBtn.Anchor = AnchorStyles.Bottom;
-            anteriorBtn.BackColor = Color.FromArgb(96, 96, 120);
-            anteriorBtn.FlatAppearance.BorderSize = 0;
-            anteriorBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
-            anteriorBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
-            anteriorBtn.FlatStyle = FlatStyle.Flat;
-            anteriorBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
-            anteriorBtn.ForeColor = Color.White;
-            anteriorBtn.Location = new Point(788, 653);
-            anteriorBtn.Name = "anteriorBtn";
-            anteriorBtn.Size = new Size(124, 45);
-            anteriorBtn.TabIndex = 8;
-            anteriorBtn.Text = "ANTERIOR";
-            anteriorBtn.UseVisualStyleBackColor = false;
+            openMenu.Cursor = Cursors.Hand;
+            openMenu.Dock = DockStyle.Left;
+            openMenu.Image = Properties.Resources.menu;
+            openMenu.Location = new Point(0, 0);
+            openMenu.Margin = new Padding(0);
+            openMenu.Name = "openMenu";
+            openMenu.Size = new Size(50, 50);
+            openMenu.SizeMode = PictureBoxSizeMode.StretchImage;
+            openMenu.TabIndex = 0;
+            openMenu.TabStop = false;
+            openMenu.Click += openMenu_Click;
             // 
-            // primeiroBtn
-            // 
-            primeiroBtn.Anchor = AnchorStyles.Bottom;
-            primeiroBtn.BackColor = Color.FromArgb(96, 96, 120);
-            primeiroBtn.FlatAppearance.BorderSize = 0;
-            primeiroBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
-            primeiroBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
-            primeiroBtn.FlatStyle = FlatStyle.Flat;
-            primeiroBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
-            primeiroBtn.ForeColor = Color.White;
-            primeiroBtn.Location = new Point(658, 653);
-            primeiroBtn.Name = "primeiroBtn";
-            primeiroBtn.Size = new Size(124, 45);
-            primeiroBtn.TabIndex = 9;
-            primeiroBtn.Text = "PRIMEIRO";
-            primeiroBtn.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(480, 128);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(514, 443);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 13;
-            pictureBox1.TabStop = false;
-            // 
-            // HomePage
+            // InserirForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1184, 711);
-            Controls.Add(pictureBox1);
-            Controls.Add(primeiroBtn);
-            Controls.Add(anteriorBtn);
-            Controls.Add(proximoBtn);
-            Controls.Add(ultimoBtn);
             Controls.Add(leftMenu);
             Controls.Add(windowTop);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "HomePage";
+            Name = "InserirForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "HomePage";
-            Load += HomePage_Load;
+            Text = "InserirForm";
+            leftMenu.ResumeLayout(false);
             windowTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)closeWindowBtn).EndInit();
             ((System.ComponentModel.ISupportInitialize)openMenu).EndInit();
-            leftMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Panel windowTop;
-        private PictureBox openMenu;
         private Panel leftMenu;
+        private Button homePageBtn;
+        private Button sairBtn;
+        private Button consultarBtn;
         private Button alterarBtn;
         private Button excluirBtn;
         private Button inserirBtn;
-        private Button sairBtn;
-        private Button consultarBtn;
+        private Panel windowTop;
         private PictureBox closeWindowBtn;
-        private Button homePageBtn;
-        private Button ultimoBtn;
-        private Button proximoBtn;
-        private Button anteriorBtn;
-        private Button primeiroBtn;
-        private PictureBox pictureBox1;
+        private PictureBox openMenu;
     }
 }
