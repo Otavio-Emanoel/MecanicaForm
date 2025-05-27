@@ -38,6 +38,10 @@
             windowTop = new Panel();
             closeWindowBtn = new PictureBox();
             openMenu = new PictureBox();
+            primeiroBtn = new Button();
+            anteriorBtn = new Button();
+            proximoBtn = new Button();
+            ultimoBtn = new Button();
             leftMenu.SuspendLayout();
             windowTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)closeWindowBtn).BeginInit();
@@ -92,6 +96,7 @@
             sairBtn.TabIndex = 4;
             sairBtn.Text = "SAIR";
             sairBtn.UseVisualStyleBackColor = false;
+            sairBtn.Click += sairBtn_Click;
             // 
             // consultarBtn
             // 
@@ -108,6 +113,7 @@
             consultarBtn.TabIndex = 3;
             consultarBtn.Text = "CONSULTAR";
             consultarBtn.UseVisualStyleBackColor = false;
+            consultarBtn.Click += consultarBtn_Click;
             // 
             // alterarBtn
             // 
@@ -124,6 +130,7 @@
             alterarBtn.TabIndex = 2;
             alterarBtn.Text = "ALTERAR";
             alterarBtn.UseVisualStyleBackColor = false;
+            alterarBtn.Click += alterarBtn_Click;
             // 
             // excluirBtn
             // 
@@ -140,6 +147,7 @@
             excluirBtn.TabIndex = 1;
             excluirBtn.Text = "EXCLUIR";
             excluirBtn.UseVisualStyleBackColor = false;
+            excluirBtn.Click += excluirBtn_Click;
             // 
             // inserirBtn
             // 
@@ -197,13 +205,89 @@
             openMenu.TabStop = false;
             openMenu.Click += openMenu_Click;
             // 
+            // primeiroBtn
+            // 
+            primeiroBtn.Anchor = AnchorStyles.Bottom;
+            primeiroBtn.BackColor = Color.FromArgb(96, 96, 120);
+            primeiroBtn.FlatAppearance.BorderSize = 0;
+            primeiroBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
+            primeiroBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
+            primeiroBtn.FlatStyle = FlatStyle.Flat;
+            primeiroBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            primeiroBtn.ForeColor = Color.White;
+            primeiroBtn.Location = new Point(657, 654);
+            primeiroBtn.Name = "primeiroBtn";
+            primeiroBtn.Size = new Size(124, 45);
+            primeiroBtn.TabIndex = 13;
+            primeiroBtn.Text = "PRIMEIRO";
+            primeiroBtn.UseVisualStyleBackColor = false;
+            primeiroBtn.Click += primeiroBtn_Click;
+            // 
+            // anteriorBtn
+            // 
+            anteriorBtn.Anchor = AnchorStyles.Bottom;
+            anteriorBtn.BackColor = Color.FromArgb(96, 96, 120);
+            anteriorBtn.FlatAppearance.BorderSize = 0;
+            anteriorBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
+            anteriorBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
+            anteriorBtn.FlatStyle = FlatStyle.Flat;
+            anteriorBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            anteriorBtn.ForeColor = Color.White;
+            anteriorBtn.Location = new Point(787, 654);
+            anteriorBtn.Name = "anteriorBtn";
+            anteriorBtn.Size = new Size(124, 45);
+            anteriorBtn.TabIndex = 12;
+            anteriorBtn.Text = "ANTERIOR";
+            anteriorBtn.UseVisualStyleBackColor = false;
+            anteriorBtn.Click += anteriorBtn_Click;
+            // 
+            // proximoBtn
+            // 
+            proximoBtn.Anchor = AnchorStyles.Bottom;
+            proximoBtn.BackColor = Color.FromArgb(96, 96, 120);
+            proximoBtn.FlatAppearance.BorderSize = 0;
+            proximoBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
+            proximoBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
+            proximoBtn.FlatStyle = FlatStyle.Flat;
+            proximoBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            proximoBtn.ForeColor = Color.White;
+            proximoBtn.Location = new Point(917, 654);
+            proximoBtn.Name = "proximoBtn";
+            proximoBtn.Size = new Size(124, 45);
+            proximoBtn.TabIndex = 11;
+            proximoBtn.Text = "PRÓXIMO";
+            proximoBtn.UseVisualStyleBackColor = false;
+            proximoBtn.Click += proximoBtn_Click;
+            // 
+            // ultimoBtn
+            // 
+            ultimoBtn.Anchor = AnchorStyles.Bottom;
+            ultimoBtn.BackColor = Color.FromArgb(96, 96, 120);
+            ultimoBtn.FlatAppearance.BorderSize = 0;
+            ultimoBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
+            ultimoBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
+            ultimoBtn.FlatStyle = FlatStyle.Flat;
+            ultimoBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            ultimoBtn.ForeColor = Color.White;
+            ultimoBtn.Location = new Point(1047, 654);
+            ultimoBtn.Name = "ultimoBtn";
+            ultimoBtn.Size = new Size(124, 45);
+            ultimoBtn.TabIndex = 10;
+            ultimoBtn.Text = "ÚLTIMO";
+            ultimoBtn.UseVisualStyleBackColor = false;
+            ultimoBtn.Click += ultimoBtn_Click;
+            // 
             // InserirForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1184, 711);
+            Controls.Add(primeiroBtn);
             Controls.Add(leftMenu);
+            Controls.Add(anteriorBtn);
             Controls.Add(windowTop);
+            Controls.Add(proximoBtn);
+            Controls.Add(ultimoBtn);
             FormBorderStyle = FormBorderStyle.None;
             Name = "InserirForm";
             StartPosition = FormStartPosition.CenterScreen;
@@ -226,5 +310,9 @@
         private Panel windowTop;
         private PictureBox closeWindowBtn;
         private PictureBox openMenu;
+        private Button primeiroBtn;
+        private Button anteriorBtn;
+        private Button proximoBtn;
+        private Button ultimoBtn;
     }
 }

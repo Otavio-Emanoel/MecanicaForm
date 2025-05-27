@@ -110,11 +110,64 @@ namespace MecanicaForm
                 SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
             }
         }
+        private void homePageBtn_Click(object sender, EventArgs e)
+        {
+            var HomePage = new HomePage();
+            HomePage.Show();
+            this.Hide();
+        }
 
         private void inserirBtn_Click(object sender, EventArgs e)
         {
             var InserirForm = new InserirForm();
             InserirForm.Show();
+            this.Hide();
+        }
+
+        private void alterarBtn_Click(object sender, EventArgs e)
+        {
+            var AlterarForm = new AlterarForm();
+            AlterarForm.Show();
+            this.Hide();
+        }
+
+        private void consultarBtn_Click(object sender, EventArgs e)
+        {
+            var ConsultarForm = new ConsultarForm();
+            ConsultarForm.Show();
+            this.Hide();
+        }
+
+        private void sairBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void primeiroBtn_Click(object sender, EventArgs e)
+        {
+            var HomePage = new HomePage();
+            HomePage.Show();
+            this.Hide();
+        }
+
+        private void anteriorBtn_Click(object sender, EventArgs e)
+        {
+            var InserirForm = new InserirForm();
+            InserirForm.Show();
+            this.Hide();
+        }
+
+        private void proximoBtn_Click(object sender, EventArgs e)
+        {
+            var AlterarForm = new AlterarForm();
+            AlterarForm.Show();
+            this.Hide();
+        }
+
+        private void ultimoBtn_Click(object sender, EventArgs e)
+        {
+            var ConsultarForm = new ConsultarForm();
+            ConsultarForm.Show();
             this.Hide();
         }
     }

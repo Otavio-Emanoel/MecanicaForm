@@ -117,5 +117,59 @@ namespace MecanicaForm
             HomePage.Show();
             this.Hide();
         }
+
+        private void excluirBtn_Click(object sender, EventArgs e)
+        {
+            var ExcluirForm = new ExcluirForm();
+            ExcluirForm.Show();
+            this.Hide();
+        }
+
+        private void alterarBtn_Click(object sender, EventArgs e)
+        {
+            var AlterarForm = new AlterarForm();
+            AlterarForm.Show();
+            this.Hide();
+        }
+
+        private void consultarBtn_Click(object sender, EventArgs e)
+        {
+            var ConsultarForm = new ConsultarForm();
+            ConsultarForm.Show();
+            this.Hide();
+        }
+
+        private void sairBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void anteriorBtn_Click(object sender, EventArgs e)
+        {
+            var HomePage = new HomePage();
+            HomePage.Show();
+            this.Hide();
+        }
+
+        private void primeiroBtn_Click(object sender, EventArgs e)
+        {
+            var HomePage = new HomePage();
+            HomePage.Show();
+            this.Hide();
+        }
+
+        private void proximoBtn_Click(object sender, EventArgs e)
+        {
+            var ExcluirForm = new ExcluirForm();
+            ExcluirForm.Show();
+            this.Hide();
+        }
+
+        private void ultimoBtn_Click(object sender, EventArgs e)
+        {
+            var ConsultarForm = new ConsultarForm();
+            ConsultarForm.Show();
+            this.Hide();
+        }
     }
 }

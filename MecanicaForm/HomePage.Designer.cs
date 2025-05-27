@@ -138,6 +138,7 @@
             sairBtn.TabIndex = 4;
             sairBtn.Text = "SAIR";
             sairBtn.UseVisualStyleBackColor = false;
+            sairBtn.Click += sairBtn_Click;
             // 
             // consultarBtn
             // 
@@ -154,6 +155,7 @@
             consultarBtn.TabIndex = 3;
             consultarBtn.Text = "CONSULTAR";
             consultarBtn.UseVisualStyleBackColor = false;
+            consultarBtn.Click += consultarBtn_Click;
             // 
             // alterarBtn
             // 
@@ -170,6 +172,7 @@
             alterarBtn.TabIndex = 2;
             alterarBtn.Text = "ALTERAR";
             alterarBtn.UseVisualStyleBackColor = false;
+            alterarBtn.Click += alterarBtn_Click;
             // 
             // excluirBtn
             // 
@@ -186,6 +189,7 @@
             excluirBtn.TabIndex = 1;
             excluirBtn.Text = "EXCLUIR";
             excluirBtn.UseVisualStyleBackColor = false;
+            excluirBtn.Click += excluirBtn_Click;
             // 
             // inserirBtn
             // 
@@ -220,6 +224,7 @@
             ultimoBtn.TabIndex = 6;
             ultimoBtn.Text = "ÚLTIMO";
             ultimoBtn.UseVisualStyleBackColor = false;
+            ultimoBtn.Click += ultimoBtn_Click;
             // 
             // proximoBtn
             // 
@@ -237,6 +242,7 @@
             proximoBtn.TabIndex = 7;
             proximoBtn.Text = "PRÓXIMO";
             proximoBtn.UseVisualStyleBackColor = false;
+            proximoBtn.Click += proximoBtn_Click;
             // 
             // anteriorBtn
             // 
@@ -254,6 +260,7 @@
             anteriorBtn.TabIndex = 8;
             anteriorBtn.Text = "ANTERIOR";
             anteriorBtn.UseVisualStyleBackColor = false;
+            anteriorBtn.Click += anteriorBtn_Click;
             // 
             // primeiroBtn
             // 
