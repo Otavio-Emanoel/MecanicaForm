@@ -64,6 +64,7 @@
             primeiroBtn.TabIndex = 19;
             primeiroBtn.Text = "PRIMEIRO";
             primeiroBtn.UseVisualStyleBackColor = false;
+            primeiroBtn.Click += primeiroBtn_Click;
             // 
             // anteriorBtn
             // 
@@ -81,6 +82,7 @@
             anteriorBtn.TabIndex = 18;
             anteriorBtn.Text = "ANTERIOR";
             anteriorBtn.UseVisualStyleBackColor = false;
+            anteriorBtn.Click += anteriorBtn_Click;
             // 
             // proximoBtn
             // 
@@ -98,6 +100,7 @@
             proximoBtn.TabIndex = 17;
             proximoBtn.Text = "PRÓXIMO";
             proximoBtn.UseVisualStyleBackColor = false;
+            proximoBtn.Click += proximoBtn_Click;
             // 
             // ultimoBtn
             // 
@@ -115,6 +118,7 @@
             ultimoBtn.TabIndex = 16;
             ultimoBtn.Text = "ÚLTIMO";
             ultimoBtn.UseVisualStyleBackColor = false;
+            ultimoBtn.Click += ultimoBtn_Click;
             // 
             // leftMenu
             // 
@@ -147,6 +151,7 @@
             homePageBtn.TabIndex = 5;
             homePageBtn.Text = "INÍCIO";
             homePageBtn.UseVisualStyleBackColor = false;
+            homePageBtn.Click += homePageBtn_Click;
             // 
             // sairBtn
             // 
@@ -163,6 +168,7 @@
             sairBtn.TabIndex = 4;
             sairBtn.Text = "SAIR";
             sairBtn.UseVisualStyleBackColor = false;
+            sairBtn.Click += sairBtn_Click;
             // 
             // consultarBtn
             // 
@@ -179,6 +185,7 @@
             consultarBtn.TabIndex = 3;
             consultarBtn.Text = "CONSULTAR";
             consultarBtn.UseVisualStyleBackColor = false;
+            consultarBtn.Click += consultarBtn_Click;
             // 
             // alterarBtn
             // 
@@ -195,6 +202,7 @@
             alterarBtn.TabIndex = 2;
             alterarBtn.Text = "ALTERAR";
             alterarBtn.UseVisualStyleBackColor = false;
+            alterarBtn.Click += alterarBtn_Click;
             // 
             // excluirBtn
             // 
@@ -211,6 +219,7 @@
             excluirBtn.TabIndex = 1;
             excluirBtn.Text = "EXCLUIR";
             excluirBtn.UseVisualStyleBackColor = false;
+            excluirBtn.Click += excluirBtn_Click;
             // 
             // inserirBtn
             // 
@@ -227,6 +236,7 @@
             inserirBtn.TabIndex = 0;
             inserirBtn.Text = "INSERIR";
             inserirBtn.UseVisualStyleBackColor = false;
+            inserirBtn.Click += inserirBtn_Click;
             // 
             // windowTop
             // 
@@ -238,6 +248,7 @@
             windowTop.Name = "windowTop";
             windowTop.Size = new Size(1184, 50);
             windowTop.TabIndex = 14;
+            windowTop.MouseDown += windowTop_MouseDown;
             // 
             // closeWindowBtn
             // 
@@ -251,6 +262,7 @@
             closeWindowBtn.SizeMode = PictureBoxSizeMode.StretchImage;
             closeWindowBtn.TabIndex = 1;
             closeWindowBtn.TabStop = false;
+            closeWindowBtn.Click += closeWindowBtn_Click;
             // 
             // openMenu
             // 
@@ -264,6 +276,7 @@
             openMenu.SizeMode = PictureBoxSizeMode.StretchImage;
             openMenu.TabIndex = 0;
             openMenu.TabStop = false;
+            openMenu.Click += openMenu_Click;
             // 
             // ConsultarForm
             // 
@@ -278,7 +291,9 @@
             Controls.Add(windowTop);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ConsultarForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ConsultarForm";
+            Load += ConsultarForm_Load;
             leftMenu.ResumeLayout(false);
             windowTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)closeWindowBtn).EndInit();

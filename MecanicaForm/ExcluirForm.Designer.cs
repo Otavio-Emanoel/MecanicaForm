@@ -288,6 +288,7 @@
             Controls.Add(ultimoBtn);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ExcluirForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ExcluirForm";
             leftMenu.ResumeLayout(false);
             windowTop.ResumeLayout(false);
