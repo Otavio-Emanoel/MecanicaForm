@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MecanicaForm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec9d4312d8f0e7fd3401e88050f53d4458a075cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47d0371e3fb238b5515f7d6f9915ed1d90f0148b")]
 [assembly: System.Reflection.AssemblyProductAttribute("MecanicaForm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MecanicaForm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

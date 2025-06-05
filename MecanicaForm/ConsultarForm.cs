@@ -151,8 +151,8 @@ namespace MecanicaForm
 
         private void anteriorBtn_Click(object sender, EventArgs e)
         {
-            var HomePage = new HomePage();
-            HomePage.Show();
+            var AlterarForm = new AlterarForm();
+            AlterarForm.Show();
             this.Hide();
         }
 
@@ -165,9 +165,7 @@ namespace MecanicaForm
 
         private void proximoBtn_Click(object sender, EventArgs e)
         {
-            var ExcluirForm = new ExcluirForm();
-            ExcluirForm.Show();
-            this.Hide();
+            
         }
 
         private void ultimoBtn_Click(object sender, EventArgs e)
