@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aluno\\Source\\Repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj": {}
+    "C:\\Users\\Aluno\\source\\repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aluno\\Source\\Repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj": {
+    "C:\\Users\\Aluno\\source\\repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aluno\\Source\\Repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj",
+        "projectUniqueName": "C:\\Users\\Aluno\\source\\repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj",
         "projectName": "MecanicaForm",
-        "projectPath": "C:\\Users\\Aluno\\Source\\Repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj",
+        "projectPath": "C:\\Users\\Aluno\\source\\repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj",
         "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Aluno\\Source\\Repos\\MecanicaForm\\MecanicaForm\\obj\\",
         "projectStyle": "PackageReference",
