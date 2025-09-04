@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aluno\\source\\repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj": {}
+    "C:\\Users\\Otavio\\Source\\Repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aluno\\source\\repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj": {
+    "C:\\Users\\Otavio\\Source\\Repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aluno\\source\\repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj",
+        "projectUniqueName": "C:\\Users\\Otavio\\Source\\Repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj",
         "projectName": "MecanicaForm",
-        "projectPath": "C:\\Users\\Aluno\\source\\repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj",
-        "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aluno\\Source\\Repos\\MecanicaForm\\MecanicaForm\\obj\\",
+        "projectPath": "C:\\Users\\Otavio\\Source\\Repos\\MecanicaForm\\MecanicaForm\\MecanicaForm.csproj",
+        "packagesPath": "C:\\Users\\Otavio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Otavio\\Source\\Repos\\MecanicaForm\\MecanicaForm\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Otavio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,11 +40,17 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.4.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -68,7 +70,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

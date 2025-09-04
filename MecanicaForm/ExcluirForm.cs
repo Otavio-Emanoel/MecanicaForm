@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using MySql.Data.MySqlClient;
 
 namespace MecanicaForm
 {
@@ -35,12 +36,16 @@ namespace MecanicaForm
             menuTimer = new System.Windows.Forms.Timer();
             menuTimer.Interval = 10;
             menuTimer.Tick += MenuTimer_Tick;
+
+            Load += ExcluirForm_Load;
+            deleteBtn.Click += deleteBtn_Click;
         }
 
         private void HomePage_Load(object sender, EventArgs e)
         {
             leftMenu.Width = 0;
             leftMenu.Visible = false;
+            CarregarGrid();
         }
 
         private void openMenu_Click(object sender, EventArgs e)
@@ -169,6 +174,68 @@ namespace MecanicaForm
             var ConsultarForm = new ConsultarForm();
             ConsultarForm.Show();
             this.Hide();
+        }
+
+        private void ExcluirForm_Load(object? sender, EventArgs e)
+        {
+            // Garantir grid carregada
+            CarregarGrid();
+        }
+
+        private void CarregarGrid()
+        {
+            try
+            {
+                using var conn = new MySqlConnection(DatabaseInitializer.AppConnectionString);
+                conn.Open();
+                using var cmd = conn.CreateCommand();
+                cmd.CommandText = "SELECT Id, Responsavel, Nome, Valor, Tipo, CriadoEm FROM registros ORDER BY CriadoEm DESC, Id DESC";
+                using var da = new MySqlDataAdapter(cmd);
+                var dt = new DataTable();
+                da.Fill(dt);
+                dataGrid.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao carregar registros: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void deleteBtn_Click(object? sender, EventArgs e)
+        {
+            if (dataGrid.CurrentRow == null || dataGrid.CurrentRow.DataBoundItem == null)
+            {
+                MessageBox.Show("Selecione um registro para excluir.");
+                return;
+            }
+            var row = ((DataRowView)dataGrid.CurrentRow.DataBoundItem).Row;
+            int id = Convert.ToInt32(row["Id"]);
+            string nome = row["Nome"]?.ToString() ?? "";
+            var confirm = MessageBox.Show($"Tem certeza que deseja excluir o registro #{id} - {nome}?", "Confirmar exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            if (confirm != DialogResult.Yes) return;
+
+            try
+            {
+                using var conn = new MySqlConnection(DatabaseInitializer.AppConnectionString);
+                conn.Open();
+                using var cmd = conn.CreateCommand();
+                cmd.CommandText = "DELETE FROM registros WHERE Id=@id";
+                cmd.Parameters.AddWithValue("@id", id);
+                int rows = cmd.ExecuteNonQuery();
+                if (rows > 0)
+                {
+                    MessageBox.Show("Registro excluído com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CarregarGrid();
+                }
+                else
+                {
+                    MessageBox.Show("Nenhum registro foi excluído.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao excluir: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

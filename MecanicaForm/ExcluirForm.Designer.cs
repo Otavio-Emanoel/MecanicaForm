@@ -42,6 +42,9 @@
             anteriorBtn = new Button();
             proximoBtn = new Button();
             ultimoBtn = new Button();
+            contentPanel = new Panel();
+            dataGrid = new DataGridView();
+            deleteBtn = new Button();
             leftMenu.SuspendLayout();
             windowTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)closeWindowBtn).BeginInit();
@@ -203,9 +206,47 @@
             openMenu.TabStop = false;
             openMenu.Click += openMenu_Click;
             // 
+            // contentPanel
+            // 
+            contentPanel.Dock = DockStyle.Fill;
+            contentPanel.Location = new Point(258, 50);
+            contentPanel.Name = "contentPanel";
+            contentPanel.Size = new Size(926, 661);
+            contentPanel.TabIndex = 18;
+            // 
+            // dataGrid
+            // 
+            dataGrid.AllowUserToAddRows = false;
+            dataGrid.AllowUserToDeleteRows = false;
+            dataGrid.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGrid.BackgroundColor = Color.White;
+            dataGrid.Location = new Point(20, 20);
+            dataGrid.Name = "dataGrid";
+            dataGrid.ReadOnly = true;
+            dataGrid.RowHeadersVisible = false;
+            dataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGrid.Size = new Size(886, 560);
+            dataGrid.TabIndex = 0;
+            // 
+            // deleteBtn
+            // 
+            deleteBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            deleteBtn.BackColor = Color.FromArgb(200, 60, 60);
+            deleteBtn.FlatAppearance.BorderSize = 0;
+            deleteBtn.FlatStyle = FlatStyle.Flat;
+            deleteBtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            deleteBtn.ForeColor = Color.White;
+            deleteBtn.Location = new Point(746, 600);
+            deleteBtn.Name = "deleteBtn";
+            deleteBtn.Size = new Size(160, 35);
+            deleteBtn.TabIndex = 1;
+            deleteBtn.Text = "EXCLUIR SELECIONADO";
+            deleteBtn.UseVisualStyleBackColor = false;
+            // 
             // primeiroBtn
             // 
-            primeiroBtn.Anchor = AnchorStyles.Bottom;
+            primeiroBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             primeiroBtn.BackColor = Color.FromArgb(96, 96, 120);
             primeiroBtn.FlatAppearance.BorderSize = 0;
             primeiroBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
@@ -213,7 +254,7 @@
             primeiroBtn.FlatStyle = FlatStyle.Flat;
             primeiroBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
             primeiroBtn.ForeColor = Color.White;
-            primeiroBtn.Location = new Point(658, 654);
+            primeiroBtn.Location = new Point(20, 606);
             primeiroBtn.Name = "primeiroBtn";
             primeiroBtn.Size = new Size(124, 45);
             primeiroBtn.TabIndex = 17;
@@ -223,7 +264,7 @@
             // 
             // anteriorBtn
             // 
-            anteriorBtn.Anchor = AnchorStyles.Bottom;
+            anteriorBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             anteriorBtn.BackColor = Color.FromArgb(96, 96, 120);
             anteriorBtn.FlatAppearance.BorderSize = 0;
             anteriorBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
@@ -231,7 +272,7 @@
             anteriorBtn.FlatStyle = FlatStyle.Flat;
             anteriorBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
             anteriorBtn.ForeColor = Color.White;
-            anteriorBtn.Location = new Point(788, 654);
+            anteriorBtn.Location = new Point(150, 606);
             anteriorBtn.Name = "anteriorBtn";
             anteriorBtn.Size = new Size(124, 45);
             anteriorBtn.TabIndex = 16;
@@ -241,7 +282,7 @@
             // 
             // proximoBtn
             // 
-            proximoBtn.Anchor = AnchorStyles.Bottom;
+            proximoBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             proximoBtn.BackColor = Color.FromArgb(96, 96, 120);
             proximoBtn.FlatAppearance.BorderSize = 0;
             proximoBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
@@ -249,7 +290,7 @@
             proximoBtn.FlatStyle = FlatStyle.Flat;
             proximoBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
             proximoBtn.ForeColor = Color.White;
-            proximoBtn.Location = new Point(918, 654);
+            proximoBtn.Location = new Point(280, 606);
             proximoBtn.Name = "proximoBtn";
             proximoBtn.Size = new Size(124, 45);
             proximoBtn.TabIndex = 15;
@@ -259,7 +300,7 @@
             // 
             // ultimoBtn
             // 
-            ultimoBtn.Anchor = AnchorStyles.Bottom;
+            ultimoBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             ultimoBtn.BackColor = Color.FromArgb(96, 96, 120);
             ultimoBtn.FlatAppearance.BorderSize = 0;
             ultimoBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
@@ -267,7 +308,7 @@
             ultimoBtn.FlatStyle = FlatStyle.Flat;
             ultimoBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
             ultimoBtn.ForeColor = Color.White;
-            ultimoBtn.Location = new Point(1048, 654);
+            ultimoBtn.Location = new Point(410, 606);
             ultimoBtn.Name = "ultimoBtn";
             ultimoBtn.Size = new Size(124, 45);
             ultimoBtn.TabIndex = 14;
@@ -275,17 +316,23 @@
             ultimoBtn.UseVisualStyleBackColor = false;
             ultimoBtn.Click += ultimoBtn_Click;
             // 
+            // Monta conteúdo do painel
+            // 
+            contentPanel.Controls.Add(deleteBtn);
+            contentPanel.Controls.Add(ultimoBtn);
+            contentPanel.Controls.Add(proximoBtn);
+            contentPanel.Controls.Add(anteriorBtn);
+            contentPanel.Controls.Add(primeiroBtn);
+            contentPanel.Controls.Add(dataGrid);
+            // 
             // ExcluirForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1184, 711);
-            Controls.Add(primeiroBtn);
-            Controls.Add(leftMenu);
-            Controls.Add(anteriorBtn);
             Controls.Add(windowTop);
-            Controls.Add(proximoBtn);
-            Controls.Add(ultimoBtn);
+            Controls.Add(leftMenu);
+            Controls.Add(contentPanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ExcluirForm";
             StartPosition = FormStartPosition.CenterScreen;
@@ -309,9 +356,12 @@
         private Panel windowTop;
         private PictureBox closeWindowBtn;
         private PictureBox openMenu;
-        private Button primeiroBtn;
-        private Button anteriorBtn;
-        private Button proximoBtn;
-        private Button ultimoBtn;
+    private Button primeiroBtn;
+    private Button anteriorBtn;
+    private Button proximoBtn;
+    private Button ultimoBtn;
+    private Panel contentPanel;
+    private DataGridView dataGrid;
+    private Button deleteBtn;
     }
 }

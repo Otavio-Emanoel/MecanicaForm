@@ -42,10 +42,27 @@
             windowTop = new Panel();
             closeWindowBtn = new PictureBox();
             openMenu = new PictureBox();
+            panel1 = new Panel();
+            dataGrid = new DataGridView();
+            label6 = new Label();
+            insertBtn = new Button();
+            typeFormService = new RadioButton();
+            typeFormAutoPart = new RadioButton();
+            extraTxt = new TextBox();
+            label4 = new Label();
+            valueTxt = new TextBox();
+            label5 = new Label();
+            nameTxt = new TextBox();
+            label3 = new Label();
+            responsableTxt = new TextBox();
+            label1 = new Label();
+            idTxt = new TextBox();
+            label2 = new Label();
             leftMenu.SuspendLayout();
             windowTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)closeWindowBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)openMenu).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // primeiroBtn
@@ -277,11 +294,198 @@
             openMenu.TabStop = false;
             openMenu.Click += openMenu_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(230, 230, 230);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(insertBtn);
+            panel1.Controls.Add(typeFormService);
+            panel1.Controls.Add(typeFormAutoPart);
+            panel1.Controls.Add(extraTxt);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(valueTxt);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(nameTxt);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(responsableTxt);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(idTxt);
+            panel1.Controls.Add(label2);
+            panel1.Location = new Point(261, 120);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(500, 471);
+            panel1.TabIndex = 20;
+
+            // dataGrid
+            // 
+            dataGrid.AllowUserToAddRows = false;
+            dataGrid.AllowUserToDeleteRows = false;
+            dataGrid.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGrid.BackgroundColor = Color.White;
+            dataGrid.Location = new Point(781, 120);
+            dataGrid.Name = "dataGrid";
+            dataGrid.ReadOnly = true;
+            dataGrid.RowHeadersVisible = false;
+            dataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGrid.Size = new Size(383, 471);
+            dataGrid.TabIndex = 21;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("MS UI Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.FromArgb(96, 86, 194);
+            label6.Location = new Point(18, 21);
+            label6.Name = "label6";
+            label6.Size = new Size(273, 27);
+            label6.TabIndex = 15;
+            label6.Text = "Formulário de Alterar";
+            // 
+            // insertBtn
+            // 
+            insertBtn.BackColor = Color.FromArgb(96, 86, 194);
+            insertBtn.Cursor = Cursors.Hand;
+            insertBtn.FlatAppearance.BorderSize = 0;
+            insertBtn.FlatStyle = FlatStyle.Flat;
+            insertBtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            insertBtn.ForeColor = Color.White;
+            insertBtn.Location = new Point(18, 398);
+            insertBtn.Name = "insertBtn";
+            insertBtn.Size = new Size(216, 35);
+            insertBtn.TabIndex = 14;
+            insertBtn.Text = "SALVAR";
+            insertBtn.UseVisualStyleBackColor = false;
+            // 
+            // typeFormService
+            // 
+            typeFormService.AutoSize = true;
+            typeFormService.Location = new Point(171, 360);
+            typeFormService.Name = "typeFormService";
+            typeFormService.Size = new Size(63, 19);
+            typeFormService.TabIndex = 13;
+            typeFormService.TabStop = true;
+            typeFormService.Text = "Serviço";
+            typeFormService.UseVisualStyleBackColor = true;
+            // 
+            // typeFormAutoPart
+            // 
+            typeFormAutoPart.AutoSize = true;
+            typeFormAutoPart.Location = new Point(18, 360);
+            typeFormAutoPart.Name = "typeFormAutoPart";
+            typeFormAutoPart.Size = new Size(50, 19);
+            typeFormAutoPart.TabIndex = 12;
+            typeFormAutoPart.TabStop = true;
+            typeFormAutoPart.Text = "Peça";
+            typeFormAutoPart.UseVisualStyleBackColor = true;
+            // 
+            // extraTxt
+            // 
+            extraTxt.BackColor = Color.FromArgb(250, 251, 253);
+            extraTxt.BorderStyle = BorderStyle.None;
+            extraTxt.Font = new Font("MS UI Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            extraTxt.ForeColor = SystemColors.WindowText;
+            extraTxt.Location = new Point(18, 317);
+            extraTxt.Name = "extraTxt";
+            extraTxt.Size = new Size(216, 20);
+            extraTxt.TabIndex = 10;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(18, 294);
+            label4.Name = "label4";
+            label4.Size = new Size(108, 15);
+            label4.TabIndex = 11;
+            label4.Text = "Detalhes adicionais";
+            // 
+            // valueTxt
+            // 
+            valueTxt.BackColor = Color.FromArgb(250, 251, 253);
+            valueTxt.BorderStyle = BorderStyle.None;
+            valueTxt.Font = new Font("MS UI Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            valueTxt.ForeColor = SystemColors.WindowText;
+            valueTxt.Location = new Point(18, 261);
+            valueTxt.Name = "valueTxt";
+            valueTxt.Size = new Size(216, 20);
+            valueTxt.TabIndex = 8;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(18, 238);
+            label5.Name = "label5";
+            label5.Size = new Size(33, 15);
+            label5.TabIndex = 9;
+            label5.Text = "Valor";
+            // 
+            // nameTxt
+            // 
+            nameTxt.BackColor = Color.FromArgb(250, 251, 253);
+            nameTxt.BorderStyle = BorderStyle.None;
+            nameTxt.Font = new Font("MS UI Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            nameTxt.ForeColor = SystemColors.WindowText;
+            nameTxt.Location = new Point(18, 209);
+            nameTxt.Name = "nameTxt";
+            nameTxt.Size = new Size(216, 20);
+            nameTxt.TabIndex = 6;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(18, 186);
+            label3.Name = "label3";
+            label3.Size = new Size(40, 15);
+            label3.TabIndex = 7;
+            label3.Text = "Nome";
+            // 
+            // responsableTxt
+            // 
+            responsableTxt.BackColor = Color.FromArgb(250, 251, 253);
+            responsableTxt.BorderStyle = BorderStyle.None;
+            responsableTxt.Font = new Font("MS UI Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            responsableTxt.ForeColor = SystemColors.WindowText;
+            responsableTxt.Location = new Point(18, 153);
+            responsableTxt.Name = "responsableTxt";
+            responsableTxt.Size = new Size(216, 20);
+            responsableTxt.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(18, 130);
+            label1.Name = "label1";
+            label1.Size = new Size(162, 15);
+            label1.TabIndex = 5;
+            label1.Text = "Responsável pelo salvamento";
+            // 
+            // idTxt
+            // 
+            idTxt.BackColor = Color.FromArgb(250, 251, 253);
+            idTxt.BorderStyle = BorderStyle.None;
+            idTxt.Font = new Font("MS UI Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            idTxt.ForeColor = SystemColors.WindowText;
+            idTxt.Location = new Point(18, 101);
+            idTxt.Name = "idTxt";
+            idTxt.Size = new Size(216, 20);
+            idTxt.TabIndex = 2;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(18, 78);
+            label2.Name = "label2";
+            label2.Size = new Size(18, 15);
+            label2.TabIndex = 3;
+            label2.Text = "ID";
+            // 
             // AlterarForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1184, 711);
+            Controls.Add(dataGrid);
+            Controls.Add(panel1);
             Controls.Add(primeiroBtn);
             Controls.Add(anteriorBtn);
             Controls.Add(proximoBtn);
@@ -297,6 +501,8 @@
             windowTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)closeWindowBtn).EndInit();
             ((System.ComponentModel.ISupportInitialize)openMenu).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -316,5 +522,21 @@
         private Panel windowTop;
         private PictureBox closeWindowBtn;
         private PictureBox openMenu;
+        private Panel panel1;
+        private Label label6;
+        private Button insertBtn;
+        private RadioButton typeFormService;
+        private RadioButton typeFormAutoPart;
+        private TextBox extraTxt;
+        private Label label4;
+        private TextBox valueTxt;
+        private Label label5;
+        private TextBox nameTxt;
+        private Label label3;
+        private TextBox responsableTxt;
+        private Label label1;
+        private TextBox idTxt;
+        private Label label2;
+    private DataGridView dataGrid;
     }
 }

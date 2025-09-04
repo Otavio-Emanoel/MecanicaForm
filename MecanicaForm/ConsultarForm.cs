@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using MySql.Data.MySqlClient;
 
 namespace MecanicaForm
 {
@@ -41,6 +42,18 @@ namespace MecanicaForm
         {
             leftMenu.Width = 0;
             leftMenu.Visible = false;
+
+            // Inicializa filtro e carrega dados
+            if (tipoFilter != null)
+            {
+                if (tipoFilter.Items.Count == 0)
+                {
+                    tipoFilter.Items.AddRange(new object[] { "Todos", "Peça", "Serviço" });
+                }
+                tipoFilter.SelectedIndex = 0; // Todos
+                tipoFilter.SelectedIndexChanged += tipoFilter_SelectedIndexChanged;
+            }
+            CarregarGrid();
         }
 
         private void openMenu_Click(object sender, EventArgs e)
@@ -141,7 +154,7 @@ namespace MecanicaForm
 
         private void consultarBtn_Click(object sender, EventArgs e)
         {
-
+            CarregarGrid();
         }
 
         private void sairBtn_Click(object sender, EventArgs e)
@@ -173,6 +186,42 @@ namespace MecanicaForm
             var ConsultarForm = new ConsultarForm();
             ConsultarForm.Show();
             this.Hide();
+        }
+
+    private void tipoFilter_SelectedIndexChanged(object? sender, EventArgs e)
+        {
+            CarregarGrid();
+        }
+
+        private void CarregarGrid()
+        {
+            try
+            {
+                using var conn = new MySqlConnection(DatabaseInitializer.AppConnectionString);
+                conn.Open();
+                using var cmd = conn.CreateCommand();
+
+                string sql = "SELECT Id, Responsavel, Nome, Valor, Tipo, CriadoEm FROM registros";
+                if (tipoFilter != null && tipoFilter.SelectedItem is string sel && sel != "Todos")
+                {
+                    sql += " WHERE Tipo = @tipo";
+                    cmd.Parameters.AddWithValue("@tipo", sel == "Peça" ? "Peca" : "Servico");
+                }
+                sql += " ORDER BY CriadoEm DESC, Id DESC";
+                cmd.CommandText = sql;
+
+                using var da = new MySqlDataAdapter(cmd);
+                var dt = new DataTable();
+                da.Fill(dt);
+                if (dataGrid != null)
+                {
+                    dataGrid.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao carregar dados: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
