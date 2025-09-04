@@ -41,12 +41,8 @@ namespace MecanicaForm
             deleteBtn.Click += deleteBtn_Click;
         }
 
-        private void HomePage_Load(object sender, EventArgs e)
-        {
-            leftMenu.Width = 0;
-            leftMenu.Visible = false;
-            CarregarGrid();
-        }
+        // Sidebar inicia recolhida como nas outras telas
+        // (oculta e com largura zero)
 
         private void openMenu_Click(object sender, EventArgs e)
         {
@@ -178,6 +174,9 @@ namespace MecanicaForm
 
         private void ExcluirForm_Load(object? sender, EventArgs e)
         {
+            // Sidebar recolhida ao iniciar, como em InserirForm
+            leftMenu.Width = 0;
+            leftMenu.Visible = false;
             // Garantir grid carregada
             CarregarGrid();
         }

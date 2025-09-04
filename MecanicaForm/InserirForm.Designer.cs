@@ -69,13 +69,13 @@
             // 
             // leftMenu
             // 
-            leftMenu.BackColor = Color.FromArgb(146, 136, 244);
-            leftMenu.Controls.Add(homePageBtn);
+            leftMenu.BackColor = Color.FromArgb(54, 57, 63);
             leftMenu.Controls.Add(sairBtn);
             leftMenu.Controls.Add(consultarBtn);
             leftMenu.Controls.Add(alterarBtn);
             leftMenu.Controls.Add(excluirBtn);
             leftMenu.Controls.Add(inserirBtn);
+            leftMenu.Controls.Add(homePageBtn);
             leftMenu.Dock = DockStyle.Left;
             leftMenu.Location = new Point(0, 50);
             leftMenu.Name = "leftMenu";
@@ -85,16 +85,17 @@
             // 
             // homePageBtn
             // 
-            homePageBtn.BackColor = Color.FromArgb(146, 136, 244);
+            homePageBtn.BackColor = Color.FromArgb(54, 57, 63);
+            homePageBtn.Dock = DockStyle.Top;
             homePageBtn.FlatAppearance.BorderSize = 0;
-            homePageBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(46, 36, 144);
-            homePageBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
+            homePageBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(72, 76, 82);
+            homePageBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 68, 74);
             homePageBtn.FlatStyle = FlatStyle.Flat;
-            homePageBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            homePageBtn.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold);
             homePageBtn.ForeColor = Color.White;
-            homePageBtn.Location = new Point(3, 3);
+            homePageBtn.Location = new Point(0, 0);
             homePageBtn.Name = "homePageBtn";
-            homePageBtn.Size = new Size(252, 100);
+            homePageBtn.Size = new Size(258, 56);
             homePageBtn.TabIndex = 5;
             homePageBtn.Text = "INÍCIO";
             homePageBtn.UseVisualStyleBackColor = false;
@@ -102,16 +103,17 @@
             // 
             // sairBtn
             // 
-            sairBtn.BackColor = Color.FromArgb(146, 136, 244);
+            sairBtn.BackColor = Color.FromArgb(54, 57, 63);
+            sairBtn.Dock = DockStyle.Bottom;
             sairBtn.FlatAppearance.BorderSize = 0;
-            sairBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(46, 36, 144);
-            sairBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
+            sairBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(72, 76, 82);
+            sairBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 68, 74);
             sairBtn.FlatStyle = FlatStyle.Flat;
-            sairBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            sairBtn.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold);
             sairBtn.ForeColor = Color.White;
-            sairBtn.Location = new Point(3, 548);
+            sairBtn.Location = new Point(0, 605);
             sairBtn.Name = "sairBtn";
-            sairBtn.Size = new Size(252, 100);
+            sairBtn.Size = new Size(258, 56);
             sairBtn.TabIndex = 4;
             sairBtn.Text = "SAIR";
             sairBtn.UseVisualStyleBackColor = false;
@@ -119,16 +121,17 @@
             // 
             // consultarBtn
             // 
-            consultarBtn.BackColor = Color.FromArgb(146, 136, 244);
+            consultarBtn.BackColor = Color.FromArgb(54, 57, 63);
+            consultarBtn.Dock = DockStyle.Top;
             consultarBtn.FlatAppearance.BorderSize = 0;
-            consultarBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(46, 36, 144);
-            consultarBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
+            consultarBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(72, 76, 82);
+            consultarBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 68, 74);
             consultarBtn.FlatStyle = FlatStyle.Flat;
-            consultarBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            consultarBtn.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold);
             consultarBtn.ForeColor = Color.White;
-            consultarBtn.Location = new Point(3, 439);
+            consultarBtn.Location = new Point(0, 0);
             consultarBtn.Name = "consultarBtn";
-            consultarBtn.Size = new Size(252, 100);
+            consultarBtn.Size = new Size(258, 56);
             consultarBtn.TabIndex = 3;
             consultarBtn.Text = "CONSULTAR";
             consultarBtn.UseVisualStyleBackColor = false;
@@ -136,16 +139,17 @@
             // 
             // alterarBtn
             // 
-            alterarBtn.BackColor = Color.FromArgb(146, 136, 244);
+            alterarBtn.BackColor = Color.FromArgb(54, 57, 63);
+            alterarBtn.Dock = DockStyle.Top;
             alterarBtn.FlatAppearance.BorderSize = 0;
-            alterarBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(46, 36, 144);
-            alterarBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
+            alterarBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(72, 76, 82);
+            alterarBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 68, 74);
             alterarBtn.FlatStyle = FlatStyle.Flat;
-            alterarBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            alterarBtn.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold);
             alterarBtn.ForeColor = Color.White;
-            alterarBtn.Location = new Point(3, 330);
+            alterarBtn.Location = new Point(0, 0);
             alterarBtn.Name = "alterarBtn";
-            alterarBtn.Size = new Size(252, 100);
+            alterarBtn.Size = new Size(258, 56);
             alterarBtn.TabIndex = 2;
             alterarBtn.Text = "ALTERAR";
             alterarBtn.UseVisualStyleBackColor = false;
@@ -153,16 +157,17 @@
             // 
             // excluirBtn
             // 
-            excluirBtn.BackColor = Color.FromArgb(146, 136, 244);
+            excluirBtn.BackColor = Color.FromArgb(54, 57, 63);
+            excluirBtn.Dock = DockStyle.Top;
             excluirBtn.FlatAppearance.BorderSize = 0;
-            excluirBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(46, 36, 144);
-            excluirBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
+            excluirBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(72, 76, 82);
+            excluirBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 68, 74);
             excluirBtn.FlatStyle = FlatStyle.Flat;
-            excluirBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            excluirBtn.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold);
             excluirBtn.ForeColor = Color.White;
-            excluirBtn.Location = new Point(3, 221);
+            excluirBtn.Location = new Point(0, 0);
             excluirBtn.Name = "excluirBtn";
-            excluirBtn.Size = new Size(252, 100);
+            excluirBtn.Size = new Size(258, 56);
             excluirBtn.TabIndex = 1;
             excluirBtn.Text = "EXCLUIR";
             excluirBtn.UseVisualStyleBackColor = false;
@@ -170,16 +175,17 @@
             // 
             // inserirBtn
             // 
-            inserirBtn.BackColor = Color.FromArgb(146, 136, 244);
+            inserirBtn.BackColor = Color.FromArgb(54, 57, 63);
+            inserirBtn.Dock = DockStyle.Top;
             inserirBtn.FlatAppearance.BorderSize = 0;
-            inserirBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(46, 36, 144);
-            inserirBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
+            inserirBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(72, 76, 82);
+            inserirBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 68, 74);
             inserirBtn.FlatStyle = FlatStyle.Flat;
-            inserirBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            inserirBtn.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold);
             inserirBtn.ForeColor = Color.White;
-            inserirBtn.Location = new Point(3, 112);
+            inserirBtn.Location = new Point(0, 56);
             inserirBtn.Name = "inserirBtn";
-            inserirBtn.Size = new Size(252, 100);
+            inserirBtn.Size = new Size(258, 56);
             inserirBtn.TabIndex = 0;
             inserirBtn.Text = "INSERIR";
             inserirBtn.UseVisualStyleBackColor = false;
@@ -224,81 +230,88 @@
             openMenu.TabStop = false;
             openMenu.Click += openMenu_Click;
             // 
+            // contentPanel & navPanel
+            contentPanel = new Panel();
+            contentPanel.Dock = DockStyle.Fill;
+            contentPanel.Location = new Point(258, 50);
+            contentPanel.Name = "contentPanel";
+            contentPanel.Size = new Size(926, 661);
+            contentPanel.BackColor = Color.White;
+            // navPanel
+            navPanel = new Panel();
+            navPanel.Dock = DockStyle.Bottom;
+            navPanel.Height = 60;
+            navPanel.BackColor = Color.FromArgb(240, 240, 244);
+            navPanel.Padding = new Padding(12, 10, 12, 10);
+            // navFlow
+            navFlow = new FlowLayoutPanel();
+            navFlow.Dock = DockStyle.Right;
+            navFlow.AutoSize = true;
+            navFlow.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            navFlow.FlowDirection = FlowDirection.RightToLeft;
+            navFlow.WrapContents = false;
+            navFlow.Margin = new Padding(0);
+            navFlow.Padding = new Padding(0);
+            // Botões navegação (estilo)
             // primeiroBtn
-            // 
-            primeiroBtn.Anchor = AnchorStyles.Bottom;
             primeiroBtn.BackColor = Color.FromArgb(96, 96, 120);
             primeiroBtn.FlatAppearance.BorderSize = 0;
             primeiroBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
             primeiroBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
             primeiroBtn.FlatStyle = FlatStyle.Flat;
-            primeiroBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            primeiroBtn.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             primeiroBtn.ForeColor = Color.White;
-            primeiroBtn.Location = new Point(657, 654);
-            primeiroBtn.Name = "primeiroBtn";
-            primeiroBtn.Size = new Size(124, 45);
-            primeiroBtn.TabIndex = 13;
+            primeiroBtn.Size = new Size(120, 38);
+            primeiroBtn.Margin = new Padding(6, 0, 0, 0);
             primeiroBtn.Text = "PRIMEIRO";
-            primeiroBtn.UseVisualStyleBackColor = false;
             primeiroBtn.Click += primeiroBtn_Click;
-            // 
             // anteriorBtn
-            // 
-            anteriorBtn.Anchor = AnchorStyles.Bottom;
             anteriorBtn.BackColor = Color.FromArgb(96, 96, 120);
             anteriorBtn.FlatAppearance.BorderSize = 0;
             anteriorBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
             anteriorBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
             anteriorBtn.FlatStyle = FlatStyle.Flat;
-            anteriorBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            anteriorBtn.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             anteriorBtn.ForeColor = Color.White;
-            anteriorBtn.Location = new Point(787, 654);
-            anteriorBtn.Name = "anteriorBtn";
-            anteriorBtn.Size = new Size(124, 45);
-            anteriorBtn.TabIndex = 12;
+            anteriorBtn.Size = new Size(120, 38);
+            anteriorBtn.Margin = new Padding(6, 0, 0, 0);
             anteriorBtn.Text = "ANTERIOR";
-            anteriorBtn.UseVisualStyleBackColor = false;
             anteriorBtn.Click += anteriorBtn_Click;
-            // 
             // proximoBtn
-            // 
-            proximoBtn.Anchor = AnchorStyles.Bottom;
             proximoBtn.BackColor = Color.FromArgb(96, 96, 120);
             proximoBtn.FlatAppearance.BorderSize = 0;
             proximoBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
             proximoBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
             proximoBtn.FlatStyle = FlatStyle.Flat;
-            proximoBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            proximoBtn.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             proximoBtn.ForeColor = Color.White;
-            proximoBtn.Location = new Point(917, 654);
-            proximoBtn.Name = "proximoBtn";
-            proximoBtn.Size = new Size(124, 45);
-            proximoBtn.TabIndex = 11;
+            proximoBtn.Size = new Size(120, 38);
+            proximoBtn.Margin = new Padding(6, 0, 0, 0);
             proximoBtn.Text = "PRÓXIMO";
-            proximoBtn.UseVisualStyleBackColor = false;
             proximoBtn.Click += proximoBtn_Click;
-            // 
             // ultimoBtn
-            // 
-            ultimoBtn.Anchor = AnchorStyles.Bottom;
             ultimoBtn.BackColor = Color.FromArgb(96, 96, 120);
             ultimoBtn.FlatAppearance.BorderSize = 0;
             ultimoBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
             ultimoBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
             ultimoBtn.FlatStyle = FlatStyle.Flat;
-            ultimoBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            ultimoBtn.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             ultimoBtn.ForeColor = Color.White;
-            ultimoBtn.Location = new Point(1047, 654);
-            ultimoBtn.Name = "ultimoBtn";
-            ultimoBtn.Size = new Size(124, 45);
-            ultimoBtn.TabIndex = 10;
+            ultimoBtn.Size = new Size(120, 38);
+            ultimoBtn.Margin = new Padding(6, 0, 0, 0);
             ultimoBtn.Text = "ÚLTIMO";
-            ultimoBtn.UseVisualStyleBackColor = false;
             ultimoBtn.Click += ultimoBtn_Click;
+            // Add aos containers
+            navFlow.Controls.Add(ultimoBtn);
+            navFlow.Controls.Add(proximoBtn);
+            navFlow.Controls.Add(anteriorBtn);
+            navFlow.Controls.Add(primeiroBtn);
+            navPanel.Controls.Add(navFlow);
+            contentPanel.Controls.Add(navPanel);
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(230, 230, 230);
+            panel1.BackColor = Color.White;
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(insertBtn);
@@ -314,10 +327,11 @@
             panel1.Controls.Add(label1);
             panel1.Controls.Add(idTxt);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(264, 118);
+            panel1.Location = new Point(280, 80);
             panel1.Name = "panel1";
             panel1.Size = new Size(662, 471);
             panel1.TabIndex = 16;
+            contentPanel.Controls.Add(panel1);
             // 
             // idTxt
             // 
@@ -443,15 +457,15 @@
             // 
             // insertBtn
             // 
-            insertBtn.BackColor = Color.FromArgb(96, 86, 194);
+            insertBtn.BackColor = Color.FromArgb(0, 122, 204);
             insertBtn.Cursor = Cursors.Hand;
             insertBtn.FlatAppearance.BorderSize = 0;
             insertBtn.FlatStyle = FlatStyle.Flat;
-            insertBtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            insertBtn.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             insertBtn.ForeColor = Color.White;
             insertBtn.Location = new Point(18, 398);
             insertBtn.Name = "insertBtn";
-            insertBtn.Size = new Size(216, 35);
+            insertBtn.Size = new Size(216, 40);
             insertBtn.TabIndex = 14;
             insertBtn.Text = "INSERIR";
             insertBtn.UseVisualStyleBackColor = false;
@@ -482,17 +496,14 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1184, 711);
-            Controls.Add(panel1);
-            Controls.Add(primeiroBtn);
+            Controls.Add(contentPanel);
             Controls.Add(leftMenu);
-            Controls.Add(anteriorBtn);
             Controls.Add(windowTop);
-            Controls.Add(proximoBtn);
-            Controls.Add(ultimoBtn);
             FormBorderStyle = FormBorderStyle.None;
             Name = "InserirForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "InserirForm";
+            Load += HomePage_Load;
             leftMenu.ResumeLayout(false);
             windowTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)closeWindowBtn).EndInit();
@@ -514,10 +525,13 @@
         private Panel windowTop;
         private PictureBox closeWindowBtn;
         private PictureBox openMenu;
-        private Button primeiroBtn;
-        private Button anteriorBtn;
-        private Button proximoBtn;
-        private Button ultimoBtn;
+    private Button primeiroBtn;
+    private Button anteriorBtn;
+    private Button proximoBtn;
+    private Button ultimoBtn;
+    private Panel contentPanel;
+    private Panel navPanel;
+    private FlowLayoutPanel navFlow;
         private Panel panel1;
         private TextBox responsableTxt;
         private Label label1;

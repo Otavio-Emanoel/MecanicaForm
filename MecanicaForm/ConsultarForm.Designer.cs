@@ -36,43 +36,51 @@
             proximoBtn = new Button();
             ultimoBtn = new Button();
             leftMenu = new Panel();
-            homePageBtn = new Button();
             sairBtn = new Button();
             consultarBtn = new Button();
             alterarBtn = new Button();
             excluirBtn = new Button();
             inserirBtn = new Button();
+            homePageBtn = new Button();
             windowTop = new Panel();
             closeWindowBtn = new PictureBox();
             openMenu = new PictureBox();
             contentPanel = new Panel();
+            navPanel = new Panel();
+            navFlow = new FlowLayoutPanel();
+            headerPanel = new Panel();
+            ((System.ComponentModel.ISupportInitialize)dataGrid).BeginInit();
             leftMenu.SuspendLayout();
             windowTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)closeWindowBtn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)openMenu).BeginInit();
+            contentPanel.SuspendLayout();
+            navPanel.SuspendLayout();
+            navFlow.SuspendLayout();
+            headerPanel.SuspendLayout();
             SuspendLayout();
             // 
             // dataGrid
             // 
             dataGrid.AllowUserToAddRows = false;
             dataGrid.AllowUserToDeleteRows = false;
-            dataGrid.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGrid.BackgroundColor = Color.White;
-            dataGrid.Location = new Point(20, 80);
+            dataGrid.Dock = DockStyle.Fill;
+            dataGrid.Location = new Point(0, 56);
             dataGrid.Name = "dataGrid";
             dataGrid.ReadOnly = true;
             dataGrid.RowHeadersVisible = false;
             dataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGrid.Size = new Size(886, 510);
+            dataGrid.Size = new Size(1164, 610);
             dataGrid.TabIndex = 20;
             // 
             // tipoLabel
             // 
             tipoLabel.AutoSize = true;
-            tipoLabel.Location = new Point(20, 50);
+            tipoLabel.Location = new Point(20, 20);
             tipoLabel.Name = "tipoLabel";
-            tipoLabel.Size = new Size(31, 15);
+            tipoLabel.Size = new Size(30, 15);
             tipoLabel.TabIndex = 21;
             tipoLabel.Text = "Tipo";
             // 
@@ -81,24 +89,24 @@
             tipoFilter.DropDownStyle = ComboBoxStyle.DropDownList;
             tipoFilter.FormattingEnabled = true;
             tipoFilter.Items.AddRange(new object[] { "Todos", "Peça", "Serviço" });
-            tipoFilter.Location = new Point(60, 46);
+            tipoFilter.Location = new Point(60, 16);
             tipoFilter.Name = "tipoFilter";
             tipoFilter.Size = new Size(180, 23);
             tipoFilter.TabIndex = 22;
             // 
             // primeiroBtn
             // 
-            primeiroBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             primeiroBtn.BackColor = Color.FromArgb(96, 96, 120);
             primeiroBtn.FlatAppearance.BorderSize = 0;
             primeiroBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
             primeiroBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
             primeiroBtn.FlatStyle = FlatStyle.Flat;
-            primeiroBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            primeiroBtn.Font = new Font("MS UI Gothic", 12F, FontStyle.Bold);
             primeiroBtn.ForeColor = Color.White;
-            primeiroBtn.Location = new Point(422, 606);
+            primeiroBtn.Location = new Point(56, 0);
+            primeiroBtn.Margin = new Padding(8, 0, 0, 0);
             primeiroBtn.Name = "primeiroBtn";
-            primeiroBtn.Size = new Size(124, 45);
+            primeiroBtn.Size = new Size(116, 35);
             primeiroBtn.TabIndex = 19;
             primeiroBtn.Text = "PRIMEIRO";
             primeiroBtn.UseVisualStyleBackColor = false;
@@ -106,17 +114,17 @@
             // 
             // anteriorBtn
             // 
-            anteriorBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             anteriorBtn.BackColor = Color.FromArgb(96, 96, 120);
             anteriorBtn.FlatAppearance.BorderSize = 0;
             anteriorBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(66, 66, 90);
             anteriorBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
             anteriorBtn.FlatStyle = FlatStyle.Flat;
-            anteriorBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            anteriorBtn.Font = new Font("MS UI Gothic", 12F, FontStyle.Bold);
             anteriorBtn.ForeColor = Color.White;
-            anteriorBtn.Location = new Point(552, 606);
+            anteriorBtn.Location = new Point(180, 0);
+            anteriorBtn.Margin = new Padding(8, 0, 0, 0);
             anteriorBtn.Name = "anteriorBtn";
-            anteriorBtn.Size = new Size(124, 45);
+            anteriorBtn.Size = new Size(116, 35);
             anteriorBtn.TabIndex = 18;
             anteriorBtn.Text = "ANTERIOR";
             anteriorBtn.UseVisualStyleBackColor = false;
@@ -132,7 +140,8 @@
             proximoBtn.FlatStyle = FlatStyle.Flat;
             proximoBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
             proximoBtn.ForeColor = Color.White;
-            proximoBtn.Location = new Point(682, 606);
+            proximoBtn.Location = new Point(304, 0);
+            proximoBtn.Margin = new Padding(8, 0, 0, 0);
             proximoBtn.Name = "proximoBtn";
             proximoBtn.Size = new Size(124, 45);
             proximoBtn.TabIndex = 17;
@@ -150,7 +159,8 @@
             ultimoBtn.FlatStyle = FlatStyle.Flat;
             ultimoBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
             ultimoBtn.ForeColor = Color.White;
-            ultimoBtn.Location = new Point(812, 606);
+            ultimoBtn.Location = new Point(436, 0);
+            ultimoBtn.Margin = new Padding(8, 0, 0, 0);
             ultimoBtn.Name = "ultimoBtn";
             ultimoBtn.Size = new Size(124, 45);
             ultimoBtn.TabIndex = 16;
@@ -160,49 +170,32 @@
             // 
             // leftMenu
             // 
-            leftMenu.BackColor = Color.FromArgb(146, 136, 244);
-            leftMenu.Controls.Add(homePageBtn);
+            leftMenu.BackColor = Color.FromArgb(54, 57, 63);
             leftMenu.Controls.Add(sairBtn);
             leftMenu.Controls.Add(consultarBtn);
             leftMenu.Controls.Add(alterarBtn);
             leftMenu.Controls.Add(excluirBtn);
             leftMenu.Controls.Add(inserirBtn);
-            leftMenu.Dock = DockStyle.Left;
+            leftMenu.Controls.Add(homePageBtn);
             leftMenu.Location = new Point(0, 50);
             leftMenu.Name = "leftMenu";
             leftMenu.Size = new Size(258, 661);
             leftMenu.TabIndex = 15;
             leftMenu.Visible = false;
             // 
-            // homePageBtn
-            // 
-            homePageBtn.BackColor = Color.FromArgb(146, 136, 244);
-            homePageBtn.FlatAppearance.BorderSize = 0;
-            homePageBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(46, 36, 144);
-            homePageBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
-            homePageBtn.FlatStyle = FlatStyle.Flat;
-            homePageBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
-            homePageBtn.ForeColor = Color.White;
-            homePageBtn.Location = new Point(3, 3);
-            homePageBtn.Name = "homePageBtn";
-            homePageBtn.Size = new Size(252, 100);
-            homePageBtn.TabIndex = 5;
-            homePageBtn.Text = "INÍCIO";
-            homePageBtn.UseVisualStyleBackColor = false;
-            homePageBtn.Click += homePageBtn_Click;
-            // 
             // sairBtn
             // 
-            sairBtn.BackColor = Color.FromArgb(146, 136, 244);
+            sairBtn.BackColor = Color.FromArgb(54, 57, 63);
+            sairBtn.Dock = DockStyle.Bottom;
             sairBtn.FlatAppearance.BorderSize = 0;
-            sairBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(46, 36, 144);
-            sairBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
+            sairBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(72, 76, 82);
+            sairBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 68, 74);
             sairBtn.FlatStyle = FlatStyle.Flat;
-            sairBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            sairBtn.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold);
             sairBtn.ForeColor = Color.White;
-            sairBtn.Location = new Point(3, 548);
+            sairBtn.Location = new Point(0, 605);
             sairBtn.Name = "sairBtn";
-            sairBtn.Size = new Size(252, 100);
+            sairBtn.Size = new Size(258, 56);
             sairBtn.TabIndex = 4;
             sairBtn.Text = "SAIR";
             sairBtn.UseVisualStyleBackColor = false;
@@ -210,16 +203,17 @@
             // 
             // consultarBtn
             // 
-            consultarBtn.BackColor = Color.FromArgb(146, 136, 244);
+            consultarBtn.BackColor = Color.FromArgb(54, 57, 63);
+            consultarBtn.Dock = DockStyle.Top;
             consultarBtn.FlatAppearance.BorderSize = 0;
-            consultarBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(46, 36, 144);
-            consultarBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
+            consultarBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(72, 76, 82);
+            consultarBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 68, 74);
             consultarBtn.FlatStyle = FlatStyle.Flat;
-            consultarBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            consultarBtn.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold);
             consultarBtn.ForeColor = Color.White;
-            consultarBtn.Location = new Point(3, 439);
+            consultarBtn.Location = new Point(0, 224);
             consultarBtn.Name = "consultarBtn";
-            consultarBtn.Size = new Size(252, 100);
+            consultarBtn.Size = new Size(258, 56);
             consultarBtn.TabIndex = 3;
             consultarBtn.Text = "CONSULTAR";
             consultarBtn.UseVisualStyleBackColor = false;
@@ -227,16 +221,17 @@
             // 
             // alterarBtn
             // 
-            alterarBtn.BackColor = Color.FromArgb(146, 136, 244);
+            alterarBtn.BackColor = Color.FromArgb(54, 57, 63);
+            alterarBtn.Dock = DockStyle.Top;
             alterarBtn.FlatAppearance.BorderSize = 0;
-            alterarBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(46, 36, 144);
-            alterarBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
+            alterarBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(72, 76, 82);
+            alterarBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 68, 74);
             alterarBtn.FlatStyle = FlatStyle.Flat;
-            alterarBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            alterarBtn.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold);
             alterarBtn.ForeColor = Color.White;
-            alterarBtn.Location = new Point(3, 330);
+            alterarBtn.Location = new Point(0, 168);
             alterarBtn.Name = "alterarBtn";
-            alterarBtn.Size = new Size(252, 100);
+            alterarBtn.Size = new Size(258, 56);
             alterarBtn.TabIndex = 2;
             alterarBtn.Text = "ALTERAR";
             alterarBtn.UseVisualStyleBackColor = false;
@@ -244,16 +239,17 @@
             // 
             // excluirBtn
             // 
-            excluirBtn.BackColor = Color.FromArgb(146, 136, 244);
+            excluirBtn.BackColor = Color.FromArgb(54, 57, 63);
+            excluirBtn.Dock = DockStyle.Top;
             excluirBtn.FlatAppearance.BorderSize = 0;
-            excluirBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(46, 36, 144);
-            excluirBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
+            excluirBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(72, 76, 82);
+            excluirBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 68, 74);
             excluirBtn.FlatStyle = FlatStyle.Flat;
-            excluirBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            excluirBtn.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold);
             excluirBtn.ForeColor = Color.White;
-            excluirBtn.Location = new Point(3, 221);
+            excluirBtn.Location = new Point(0, 112);
             excluirBtn.Name = "excluirBtn";
-            excluirBtn.Size = new Size(252, 100);
+            excluirBtn.Size = new Size(258, 56);
             excluirBtn.TabIndex = 1;
             excluirBtn.Text = "EXCLUIR";
             excluirBtn.UseVisualStyleBackColor = false;
@@ -261,20 +257,39 @@
             // 
             // inserirBtn
             // 
-            inserirBtn.BackColor = Color.FromArgb(146, 136, 244);
+            inserirBtn.BackColor = Color.FromArgb(54, 57, 63);
+            inserirBtn.Dock = DockStyle.Top;
             inserirBtn.FlatAppearance.BorderSize = 0;
-            inserirBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(46, 36, 144);
-            inserirBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(96, 86, 194);
+            inserirBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(72, 76, 82);
+            inserirBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 68, 74);
             inserirBtn.FlatStyle = FlatStyle.Flat;
-            inserirBtn.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold);
+            inserirBtn.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold);
             inserirBtn.ForeColor = Color.White;
-            inserirBtn.Location = new Point(3, 112);
+            inserirBtn.Location = new Point(0, 56);
             inserirBtn.Name = "inserirBtn";
-            inserirBtn.Size = new Size(252, 100);
+            inserirBtn.Size = new Size(258, 56);
             inserirBtn.TabIndex = 0;
             inserirBtn.Text = "INSERIR";
             inserirBtn.UseVisualStyleBackColor = false;
             inserirBtn.Click += inserirBtn_Click;
+            // 
+            // homePageBtn
+            // 
+            homePageBtn.BackColor = Color.FromArgb(54, 57, 63);
+            homePageBtn.Dock = DockStyle.Top;
+            homePageBtn.FlatAppearance.BorderSize = 0;
+            homePageBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(72, 76, 82);
+            homePageBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 68, 74);
+            homePageBtn.FlatStyle = FlatStyle.Flat;
+            homePageBtn.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold);
+            homePageBtn.ForeColor = Color.White;
+            homePageBtn.Location = new Point(0, 0);
+            homePageBtn.Name = "homePageBtn";
+            homePageBtn.Size = new Size(258, 56);
+            homePageBtn.TabIndex = 5;
+            homePageBtn.Text = "INÍCIO";
+            homePageBtn.UseVisualStyleBackColor = false;
+            homePageBtn.Click += homePageBtn_Click;
             // 
             // windowTop
             // 
@@ -318,25 +333,57 @@
             // 
             // contentPanel
             // 
+            contentPanel.Controls.Add(dataGrid);
+            contentPanel.Controls.Add(navPanel);
+            contentPanel.Controls.Add(headerPanel);
             contentPanel.Dock = DockStyle.Fill;
-            contentPanel.Location = new Point(258, 50);
+            contentPanel.Location = new Point(0, 0);
             contentPanel.Name = "contentPanel";
-            contentPanel.Size = new Size(926, 661);
+            contentPanel.Padding = new Padding(0, 0, 20, 0);
+            contentPanel.Size = new Size(1184, 711);
             contentPanel.TabIndex = 23;
+            // 
+            // navPanel
+            // 
+            navPanel.Controls.Add(navFlow);
+            navPanel.Dock = DockStyle.Bottom;
+            navPanel.Location = new Point(0, 666);
+            navPanel.Name = "navPanel";
+            navPanel.Padding = new Padding(0, 10, 0, 0);
+            navPanel.Size = new Size(1164, 45);
+            navPanel.TabIndex = 21;
+            // 
+            // navFlow
+            // 
+            navFlow.Controls.Add(ultimoBtn);
+            navFlow.Controls.Add(proximoBtn);
+            navFlow.Controls.Add(anteriorBtn);
+            navFlow.Controls.Add(primeiroBtn);
+            navFlow.Dock = DockStyle.Right;
+            navFlow.FlowDirection = FlowDirection.RightToLeft;
+            navFlow.Location = new Point(604, 10);
+            navFlow.Margin = new Padding(0);
+            navFlow.Name = "navFlow";
+            navFlow.Size = new Size(560, 35);
+            navFlow.TabIndex = 0;
+            navFlow.WrapContents = false;
+            // 
+            // headerPanel
+            // 
+            headerPanel.Controls.Add(tipoFilter);
+            headerPanel.Controls.Add(tipoLabel);
+            headerPanel.Dock = DockStyle.Top;
+            headerPanel.Location = new Point(0, 0);
+            headerPanel.Name = "headerPanel";
+            headerPanel.Padding = new Padding(20, 20, 20, 0);
+            headerPanel.Size = new Size(1164, 56);
+            headerPanel.TabIndex = 22;
             // 
             // ConsultarForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1184, 711);
-            // Adiciona controles ao contentPanel
-            contentPanel.Controls.Add(tipoFilter);
-            contentPanel.Controls.Add(tipoLabel);
-            contentPanel.Controls.Add(dataGrid);
-            contentPanel.Controls.Add(primeiroBtn);
-            contentPanel.Controls.Add(anteriorBtn);
-            contentPanel.Controls.Add(proximoBtn);
-            contentPanel.Controls.Add(ultimoBtn);
             Controls.Add(windowTop);
             Controls.Add(leftMenu);
             Controls.Add(contentPanel);
@@ -345,10 +392,16 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ConsultarForm";
             Load += ConsultarForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGrid).EndInit();
             leftMenu.ResumeLayout(false);
             windowTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)closeWindowBtn).EndInit();
             ((System.ComponentModel.ISupportInitialize)openMenu).EndInit();
+            contentPanel.ResumeLayout(false);
+            navPanel.ResumeLayout(false);
+            navFlow.ResumeLayout(false);
+            headerPanel.ResumeLayout(false);
+            headerPanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -369,8 +422,11 @@
         private PictureBox closeWindowBtn;
         private PictureBox openMenu;
     private Panel contentPanel;
+    private Panel headerPanel;
     private DataGridView dataGrid;
     private ComboBox tipoFilter;
     private Label tipoLabel;
+    private Panel navPanel;
+    private FlowLayoutPanel navFlow;
     }
 }
